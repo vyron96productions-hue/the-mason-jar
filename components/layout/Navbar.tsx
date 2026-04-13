@@ -45,15 +45,16 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <Image
-              src="/images/Logo/logo.png"
-              alt="The Mason Jar logo"
-              width={48}
-              height={48}
-              className="object-contain shrink-0 md:w-[56px] md:h-[56px]"
-              style={{ filter: "invert(1)", mixBlendMode: "screen" }}
-              sizes="56px"
-            />
+            <div className="w-11 h-11 md:w-13 md:h-13 rounded-full overflow-hidden shrink-0 bg-white">
+              <Image
+                src="/images/Logo/logo.png"
+                alt="The Mason Jar logo"
+                width={56}
+                height={56}
+                className="object-cover w-full h-full scale-[1.18]"
+                sizes="56px"
+              />
+            </div>
             <div className="flex flex-col leading-none">
               <span
                 className="text-lg md:text-xl font-bold tracking-tight transition-colors"
