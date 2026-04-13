@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/site-config";
 
@@ -7,14 +8,25 @@ export function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden grain"
       aria-label="Welcome to The Mason Jar"
     >
-      {/* ── Base background gradient ── */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          background:
-            "linear-gradient(160deg, #080502 0%, #140A04 25%, #2A1608 55%, #1A0D05 80%, #080502 100%)",
-        }}
-      />
+      {/* ── Hero photo ── */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hero/hero.png"
+          alt="The Mason Jar bar and grill interior — downtown Greer, SC"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        {/* Dark overlay so text stays legible over any photo */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(160deg, rgba(8,5,2,0.75) 0%, rgba(20,10,4,0.65) 40%, rgba(42,22,8,0.55) 70%, rgba(8,5,2,0.80) 100%)",
+          }}
+        />
+      </div>
 
       {/* ── Large ambient amber glow — center ── */}
       <div

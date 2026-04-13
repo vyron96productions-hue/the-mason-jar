@@ -6,6 +6,7 @@ import { AtmosphereStrip } from "@/components/home/AtmosphereStrip";
 import { EventsPreview } from "@/components/home/EventsPreview";
 import { WhyLocals } from "@/components/home/WhyLocals";
 import { CTAStrip } from "@/components/home/CTAStrip";
+import { HomeMapStrip } from "@/components/home/HomeMapStrip";
 import { SITE_CONFIG } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -27,6 +28,7 @@ export default function HomePage() {
       <EventsPreview />
       <WhyLocals />
       <CTAStrip />
+      <HomeMapStrip />
     </>
   );
 }

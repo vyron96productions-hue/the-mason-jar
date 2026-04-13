@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const FEATURED = [
@@ -7,29 +8,29 @@ const FEATURED = [
     description:
       "Half-pound hand-pressed patty, cheddar, lettuce, tomato, red onion, and our signature Mason Jar sauce on a toasted brioche bun. Served with seasoned fries.",
     price: "$13",
-    imagePlaceholder: "🍔",
+    image: "/images/food/Burger.jpg",
+    imageAlt: "The Mason Burger — signature half-pound burger at The Mason Jar in Greer SC",
     accentColor: "#D89B3C",
-    glowColor: "rgba(216,155,60,0.12)",
   },
   {
-    category: "House Cocktail",
-    name: "Mason Jar Mule",
+    category: "Friday Night Special",
+    name: "Burger & Beer Combo",
     description:
-      "House vodka, ginger beer, and fresh-squeezed lime juice. Served cold in a copper mug. This one goes down easy — and comes back around for seconds.",
-    price: "$9",
-    imagePlaceholder: "🍹",
+      "Any classic burger paired with a cold draft beer. Our Friday special that makes you forget it's a weekday — or a reminder that weekends start early here.",
+    price: "See server",
+    image: "/images/food/burger-and-beer.jpg",
+    imageAlt: "Burger and beer combo special at The Mason Jar bar and grill Greer SC",
     accentColor: "#F2B857",
-    glowColor: "rgba(242,184,87,0.10)",
   },
   {
-    category: "Friday Favorite",
-    name: "Half-Rack Baby Back Ribs",
+    category: "Fan Favorite",
+    name: "Smash Bites",
     description:
-      "Slow-smoked, fall-off-the-bone pork ribs served with your choice of two sides and cornbread. The kind of plate you plan your Friday around.",
-    price: "$22",
-    imagePlaceholder: "🍖",
+      "Four smash-style sliders on potato rolls with American cheese, special sauce, and pickles. Order one round. You'll order another.",
+    price: "$14",
+    image: "/images/food/Sliders.jpg",
+    imageAlt: "Smash bite sliders at The Mason Jar bar and grill in downtown Greer SC",
     accentColor: "#D89B3C",
-    glowColor: "rgba(180,80,20,0.12)",
   },
 ];
 
@@ -81,7 +82,7 @@ export function FeaturedItems() {
           {FEATURED.map((item) => (
             <article
               key={item.name}
-              className="card-lift rounded-2xl overflow-hidden flex flex-col"
+              className="card-lift group rounded-2xl overflow-hidden flex flex-col"
               style={{
                 background:
                   "linear-gradient(160deg, rgba(216,155,60,0.05) 0%, rgba(14,9,5,0.85) 60%)",
@@ -90,17 +91,26 @@ export function FeaturedItems() {
                   "0 8px 32px rgba(0,0,0,0.45), inset 0 1px 0 rgba(216,155,60,0.08)",
               }}
             >
-              {/* Image area */}
+              {/* Image */}
               <div
-                className="h-52 flex items-center justify-center text-6xl relative overflow-hidden"
-                style={{
-                  background: `radial-gradient(ellipse at center, ${item.glowColor} 0%, rgba(30,15,5,0.8) 70%)`,
-                  borderBottom: "1px solid rgba(216,155,60,0.12)",
-                }}
-                aria-hidden="true"
+                className="h-52 relative overflow-hidden"
+                style={{ borderBottom: "1px solid rgba(216,155,60,0.12)" }}
               >
-                {item.imagePlaceholder}
-                {/* swap with <Image> when photos available */}
+                <Image
+                  src={item.image}
+                  alt={item.imageAlt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                {/* Warm tint overlay */}
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(to top, rgba(14,9,5,0.5) 0%, transparent 50%)",
+                  }}
+                />
               </div>
 
               {/* Content */}

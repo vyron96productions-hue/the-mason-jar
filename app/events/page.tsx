@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { WEEKLY_EVENTS, SPECIAL_EVENTS } from "@/lib/events-data";
 import { EventCard } from "@/components/events/EventCard";
 import { SpecialEventCard } from "@/components/events/SpecialEventCard";
@@ -61,39 +62,47 @@ export default function EventsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
         {/* Karaoke Feature Banner */}
         <div
-          className="mb-16 p-8 md:p-12 rounded-3xl text-center"
-          style={{
-            background:
-              "linear-gradient(135deg, rgba(193,127,36,0.2) 0%, rgba(193,127,36,0.05) 100%)",
-            border: "1px solid rgba(193,127,36,0.35)",
-          }}
+          className="mb-16 rounded-3xl overflow-hidden relative"
+          style={{ border: "1px solid rgba(216,155,60,0.35)", minHeight: "340px" }}
         >
-          <div className="text-6xl mb-4" aria-hidden="true">🎤</div>
-          <p
-            className="text-sm font-semibold tracking-widest uppercase mb-3"
-            style={{ color: "#D89B3C" }}
-          >
-            Every Friday & Saturday
-          </p>
-          <h2
-            className="text-3xl md:text-4xl font-bold mb-4"
+          {/* Background photo */}
+          <Image
+            src="/images/events/karaoke.jpg"
+            alt="Karaoke night at The Mason Jar in downtown Greer SC"
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 768px) 100vw, 1200px"
+          />
+          {/* Dark overlay */}
+          <div
+            className="absolute inset-0"
             style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              color: "#F6EFE0",
+              background:
+                "linear-gradient(135deg, rgba(8,5,2,0.82) 0%, rgba(20,10,4,0.72) 60%, rgba(8,5,2,0.85) 100%)",
             }}
-          >
-            Karaoke Night — 9 PM to Close
-          </h2>
-          <p className="text-base max-w-xl mx-auto" style={{ color: "#8A7A6A" }}>
-            The most fun night out in downtown Greer. Pick your song, take the stage, and let The Mason Jar crowd be your biggest fan. No cover, no judgment — just a great time.
-          </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-4">
+          />
+          {/* Content */}
+          <div className="relative z-10 p-8 md:p-14 text-center">
+            <p className="eyebrow mb-3">Every Friday &amp; Saturday</p>
+            <h2
+              className="text-3xl md:text-5xl font-bold mb-4"
+              style={{
+                fontFamily: "'Playfair Display', Georgia, serif",
+                color: "#F6EFE0",
+                textShadow: "0 2px 20px rgba(0,0,0,0.6)",
+              }}
+            >
+              🎤 Karaoke Night{" "}
+              <span className="text-gold-gradient">— 9 PM to Close</span>
+            </h2>
+            <p className="text-base max-w-xl mx-auto mb-8" style={{ color: "#D9CCBA" }}>
+              The most fun night out in downtown Greer. Pick your song, take the stage, and let The Mason Jar crowd be your biggest fan. No cover, no judgment — just a great time.
+            </p>
             <a
               href={SITE_CONFIG.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-colors"
-              style={{ backgroundColor: "#D89B3C", color: "#0E0905" }}
+              className="btn-gold inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold text-sm"
             >
               Follow on Facebook for Updates
             </a>

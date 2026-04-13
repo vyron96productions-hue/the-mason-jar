@@ -16,32 +16,28 @@ export const metadata: Metadata = {
   },
 };
 
-// Photo data — replace src paths with real images in public/images/gallery/
-// Recommended image sizes: 800×800 for square, 1600×800 for wide
+// Real food photos
 const FOOD_IMAGES = [
-  { src: "/images/food/mason-burger.jpg", alt: "The Mason Burger — signature half-pound burger at The Mason Jar Greer SC", span: "wide" as const },
-  { src: "/images/food/ribs.jpg", alt: "Slow-smoked baby back ribs at The Mason Jar bar and grill" },
-  { src: "/images/food/wings.jpg", alt: "Crispy chicken wings at The Mason Jar in downtown Greer SC" },
-  { src: "/images/food/chicken-sandwich.jpg", alt: "Mason Jar crispy chicken sandwich" },
-  { src: "/images/food/nachos.jpg", alt: "Loaded nachos at The Mason Jar bar and grill in Greer SC" },
-  { src: "/images/food/fries.jpg", alt: "Seasoned fries at The Mason Jar" },
+  { src: "/images/food/Burger.jpg", alt: "Burger at The Mason Jar bar and grill in Greer SC", span: "normal" as const },
+  { src: "/images/food/burger-and-beer.jpg", alt: "Burger and beer combo at The Mason Jar in downtown Greer SC", span: "wide" as const },
+  { src: "/images/food/Sliders.jpg", alt: "Smash bite sliders at The Mason Jar Greer SC" },
+  { src: "/images/food/Tacos.jpg", alt: "Tacos at The Mason Jar — Taco Tuesday special in Greer SC" },
+  { src: "/images/food/quesadillas.jpg", alt: "Quesadillas at The Mason Jar bar and grill" },
+  { src: "/images/food/grilled-cheese.jpg", alt: "Grilled cheese at The Mason Jar in downtown Greer" },
+  { src: "/images/food/Salad.jpg", alt: "Fresh salad at The Mason Jar restaurant Greer SC" },
+  { src: "/images/food/salad2.jpg", alt: "House salad at The Mason Jar bar and grill" },
+  { src: "/images/food/Fries.jpg", alt: "Seasoned fries at The Mason Jar in Greer SC" },
+  { src: "/images/food/Tatertots.jpg", alt: "Tater tots at The Mason Jar bar and grill downtown Greer" },
 ];
 
-const DRINK_IMAGES = [
-  { src: "/images/drinks/mason-jar-mule.jpg", alt: "Mason Jar Mule cocktail in a copper mug", span: "normal" as const },
-  { src: "/images/drinks/draft-beer.jpg", alt: "Cold draft beer at The Mason Jar in Greer SC" },
-  { src: "/images/drinks/cocktails.jpg", alt: "Craft cocktails at The Mason Jar bar in downtown Greer", span: "wide" as const },
-  { src: "/images/drinks/peach-lemonade.jpg", alt: "Southern Peach Lemonade cocktail at The Mason Jar" },
-];
-
+// Events / atmosphere photos
 const ATMOSPHERE_IMAGES = [
-  { src: "/images/gallery/karaoke-night.jpg", alt: "Karaoke night at The Mason Jar in downtown Greer SC", span: "wide" as const },
-  { src: "/images/gallery/crowd.jpg", alt: "Friday night crowd at The Mason Jar bar and grill Greer SC" },
-  { src: "/images/gallery/interior.jpg", alt: "Interior of The Mason Jar bar and grill on Trade Street Greer" },
-  { src: "/images/gallery/bar.jpg", alt: "The bar at The Mason Jar — beer taps and cocktails in downtown Greer" },
-  { src: "/images/gallery/exterior.jpg", alt: "Exterior of The Mason Jar at 202 Trade St, Greer SC", span: "normal" as const },
-  { src: "/images/gallery/nightlife.jpg", alt: "Nightlife and entertainment at The Mason Jar Greer South Carolina" },
+  { src: "/images/events/karaoke.jpg", alt: "Karaoke night at The Mason Jar in downtown Greer SC", span: "wide" as const },
+  { src: "/images/events/taco-tuesday.png", alt: "Taco Tuesday at The Mason Jar bar and grill Greer SC" },
 ];
+
+// Placeholder for drinks — swap when photos are available
+const DRINK_IMAGES: { src: string; alt: string; span?: "normal" | "wide" | "tall" }[] = [];
 
 export default function GalleryPage() {
   return (
@@ -83,25 +79,6 @@ export default function GalleryPage() {
 
       {/* Gallery Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        {/* Note about placeholder images */}
-        <div
-          className="mb-12 p-4 rounded-xl text-center text-sm"
-          style={{
-            backgroundColor: "rgba(193,127,36,0.08)",
-            border: "1px solid rgba(193,127,36,0.2)",
-            color: "#8A7A6A",
-          }}
-        >
-          Photo gallery coming soon. Add real photos to{" "}
-          <code className="text-xs px-1 py-0.5 rounded" style={{ backgroundColor: "rgba(193,127,36,0.15)", color: "#D89B3C" }}>
-            public/images/
-          </code>{" "}
-          and update the src paths in{" "}
-          <code className="text-xs px-1 py-0.5 rounded" style={{ backgroundColor: "rgba(193,127,36,0.15)", color: "#D89B3C" }}>
-            app/gallery/page.tsx
-          </code>
-        </div>
-
         <GalleryGrid images={FOOD_IMAGES} label="Food" />
         <GalleryGrid images={DRINK_IMAGES} label="Drinks" />
         <GalleryGrid images={ATMOSPHERE_IMAGES} label="Atmosphere & Nightlife" />
