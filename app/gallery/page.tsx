@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GalleryGrid } from "@/components/gallery/GalleryGrid";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 import { SITE_CONFIG } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -104,24 +105,26 @@ export default function GalleryPage() {
             We post photos, event updates, and daily specials on Facebook and Instagram. Follow us to stay in the loop.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
+            <TrackedLink
               href={SITE_CONFIG.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-colors"
               style={{ backgroundColor: "#D89B3C", color: "#0E0905" }}
+              gtmEvent={{ event: "social_click", platform: "facebook", click_source: "gallery" }}
             >
               Facebook — @themasonjargreer
-            </a>
-            <a
+            </TrackedLink>
+            <TrackedLink
               href={SITE_CONFIG.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm border-2 transition-colors"
               style={{ borderColor: "rgba(193,127,36,0.4)", color: "#F6EFE0" }}
+              gtmEvent={{ event: "social_click", platform: "instagram", click_source: "gallery" }}
             >
               Instagram — @tmjgreer
-            </a>
+            </TrackedLink>
           </div>
         </div>
       </div>

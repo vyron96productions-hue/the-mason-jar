@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/site-config";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 
 export function Hero() {
   return (
@@ -125,14 +126,15 @@ export function Hero() {
           >
             View Our Menu
           </Link>
-          <a
+          <TrackedLink
             href={SITE_CONFIG.address.googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline-gold inline-flex items-center justify-center gap-2 px-9 py-4 text-base font-semibold rounded-xl w-full sm:w-auto"
+            gtmEvent={{ event: "directions_click", click_source: "hero" }}
           >
             Get Directions
-          </a>
+          </TrackedLink>
         </div>
 
         {/* NAP strip */}
@@ -140,15 +142,16 @@ export function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-5 animate-fade-in-up animate-delay-500"
           style={{ color: "#8A7A6A" }}
         >
-          <a
+          <TrackedLink
             href={SITE_CONFIG.phone.href}
             className="nap-link"
+            gtmEvent={{ event: "phone_click", click_source: "hero" }}
           >
             <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
             {SITE_CONFIG.phone.display}
-          </a>
+          </TrackedLink>
           <span style={{ color: "#5A4A3A" }}>·</span>
           <span className="nap-link" style={{ cursor: "default" }}>
             <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
