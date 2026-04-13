@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/site-config";
 
@@ -150,9 +151,23 @@ export function Footer() {
           <p className="text-xs" style={{ color: "#5c3d2e" }}>
             © {currentYear} The Mason Jar Bar &amp; Grill · 202 Trade St, Greer, SC 29651
           </p>
-          <p className="text-xs" style={{ color: "#5c3d2e" }}>
-            Your downtown Greer neighborhood bar &amp; grill
-          </p>
+          <a
+            href="https://verdictiq.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 transition-opacity opacity-50 hover:opacity-80"
+            aria-label="Engineered by VerdictIQ"
+          >
+            <span className="text-xs" style={{ color: "#5c3d2e" }}>Engineered by</span>
+            <Image
+              src="/images/verdictiq-logo.png"
+              alt="VerdictIQ"
+              width={72}
+              height={20}
+              className="object-contain"
+              style={{ filter: "brightness(0.55) sepia(0.2)" }}
+            />
+          </a>
         </div>
       </div>
     </footer>
