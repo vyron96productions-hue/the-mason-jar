@@ -16,9 +16,9 @@ export function BarGuardBadge({ label }: BarGuardBadgeProps) {
       <Image
         src="/images/barguard-logo.png"
         alt="BarGuard logo"
-        width={18}
-        height={18}
-        className="object-contain opacity-60"
+        width={22}
+        height={22}
+        className="object-contain opacity-75"
       />
       <span>{label}</span>
     </a>
