@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { HoursTable } from "@/components/contact/HoursTable";
 import { MapEmbed } from "@/components/contact/MapEmbed";
+import { BarGuardBadge } from "@/components/ui/BarGuardBadge";
 import { SITE_CONFIG } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -116,6 +117,9 @@ export default function ContactPage() {
 
             {/* Hours */}
             <HoursTable />
+            <div className="mt-3">
+              <BarGuardBadge label="Bar operations powered by BarGuard" />
+            </div>
 
             {/* Parking & Visit Info */}
             <div>

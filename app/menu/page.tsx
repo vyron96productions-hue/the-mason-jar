@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MENU_CATEGORIES } from "@/lib/menu-data";
 import { MenuSection } from "@/components/menu/MenuSection";
+import { BarGuardBadge } from "@/components/ui/BarGuardBadge";
 import { SITE_CONFIG } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -59,6 +60,9 @@ export default function MenuPage() {
           <p className="mt-2 text-sm" style={{ color: "#3A2210" }}>
             Prices subject to change. Ask your server about daily specials.
           </p>
+          <div className="mt-4 flex justify-center">
+            <BarGuardBadge label="Updated with real-time inventory insights by BarGuard" />
+          </div>
         </div>
       </div>
 
@@ -110,6 +114,9 @@ export default function MenuPage() {
           >
             Questions? Call us at {SITE_CONFIG.phone.display}
           </a>
+          <div className="mt-4 pt-4 flex justify-center" style={{ borderTop: "1px solid rgba(216,155,60,0.08)" }}>
+            <BarGuardBadge label="Inventory & performance powered by BarGuard" />
+          </div>
         </div>
       </div>
     </div>
