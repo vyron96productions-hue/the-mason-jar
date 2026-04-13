@@ -23,7 +23,15 @@ export function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(160deg, rgba(8,5,2,0.75) 0%, rgba(20,10,4,0.65) 40%, rgba(42,22,8,0.55) 70%, rgba(8,5,2,0.80) 100%)",
+              "linear-gradient(160deg, rgba(8,5,2,0.82) 0%, rgba(14,8,3,0.78) 40%, rgba(20,10,4,0.72) 70%, rgba(8,5,2,0.88) 100%)",
+          }}
+        />
+        {/* Extra center darkening — kills bright midground (buildings, signage) */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 80% 60% at 50% 45%, rgba(6,3,1,0.35) 0%, transparent 100%)",
           }}
         />
       </div>
@@ -103,7 +111,7 @@ export function Hero() {
 
         <p
           className="text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed animate-fade-in-up animate-delay-300"
-          style={{ color: "#9A8A7A" }}
+          style={{ color: "#C8BAA8", textShadow: "0 1px 12px rgba(0,0,0,0.8)" }}
         >
           Great food. Cold drinks. Live events. Greer's neighborhood bar for a
           good time — every night of the week.
@@ -130,7 +138,7 @@ export function Hero() {
         {/* NAP strip */}
         <div
           className="flex flex-col sm:flex-row items-center justify-center gap-5 animate-fade-in-up animate-delay-500"
-          style={{ color: "#5A4A3A" }}
+          style={{ color: "#8A7A6A" }}
         >
           <a
             href={SITE_CONFIG.phone.href}
@@ -141,7 +149,7 @@ export function Hero() {
             </svg>
             {SITE_CONFIG.phone.display}
           </a>
-          <span style={{ color: "#2E1A0A" }}>·</span>
+          <span style={{ color: "#5A4A3A" }}>·</span>
           <span className="nap-link" style={{ cursor: "default" }}>
             <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -149,7 +157,7 @@ export function Hero() {
             </svg>
             202 Trade St, Greer, SC
           </span>
-          <span style={{ color: "#2E1A0A" }}>·</span>
+          <span style={{ color: "#5A4A3A" }}>·</span>
           <span className="nap-link" style={{ cursor: "default" }}>
             <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
