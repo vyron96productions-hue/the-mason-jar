@@ -46,13 +46,13 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <Image
-              src="/images/Logo/updatedlogo.png"
+              src="/images/Logo/logo.png"
               alt="The Mason Jar logo"
-              width={40}
-              height={56}
-              className="object-contain shrink-0 md:w-[46px] md:h-[64px]"
+              width={48}
+              height={48}
+              className="object-contain shrink-0 md:w-[56px] md:h-[56px]"
               style={{ filter: "invert(1)", mixBlendMode: "screen" }}
-              sizes="46px"
+              sizes="56px"
             />
             <div className="flex flex-col leading-none">
               <span
