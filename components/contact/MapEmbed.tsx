@@ -24,7 +24,7 @@ export function MapEmbed() {
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
-          style={{ color: "#c17f24" }}
+          style={{ color: "#D89B3C" }}
         >
           <path
             strokeLinecap="round"
@@ -40,10 +40,10 @@ export function MapEmbed() {
           />
         </svg>
         <div className="text-center">
-          <p className="font-semibold text-sm mb-1" style={{ color: "#f5efe0" }}>
+          <p className="font-semibold text-sm mb-1" style={{ color: "#F6EFE0" }}>
             202 Trade St
           </p>
-          <p className="text-xs" style={{ color: "#8a7a6a" }}>
+          <p className="text-xs" style={{ color: "#8A7A6A" }}>
             Greer, SC 29651
           </p>
         </div>
@@ -52,7 +52,7 @@ export function MapEmbed() {
           target="_blank"
           rel="noopener noreferrer"
           className="text-xs font-semibold px-4 py-2 rounded-lg transition-colors"
-          style={{ backgroundColor: "#c17f24", color: "#1a1208" }}
+          style={{ backgroundColor: "#D89B3C", color: "#0E0905" }}
         >
           Open in Google Maps
         </a>

@@ -34,41 +34,53 @@ const REASONS = [
 export function WhyLocals() {
   return (
     <section
-      className="section-pad"
-      style={{ backgroundColor: "#1a1208" }}
+      className="section-pad relative overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(180deg, #221208 0%, #180D06 35%, #1E1107 70%, #150B05 100%)",
+      }}
       aria-labelledby="why-locals-heading"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <p
-            className="text-sm font-semibold tracking-widest uppercase mb-3"
-            style={{ color: "#c17f24" }}
-          >
-            Why Greer Comes Back
-          </p>
+      {/* Center ambient glow */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 800px 500px at 50% 50%, rgba(216,155,60,0.06) 0%, transparent 65%)",
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <div className="text-center mb-16">
+          <p className="eyebrow mb-4">Why Greer Comes Back</p>
           <h2
             id="why-locals-heading"
-            className="text-4xl md:text-5xl font-bold"
+            className="text-4xl md:text-5xl font-bold mb-4"
             style={{
               fontFamily: "'Playfair Display', Georgia, serif",
-              color: "#f5efe0",
+              color: "#F6EFE0",
             }}
           >
-            The Mason Jar Difference
+            The Mason Jar{" "}
+            <span className="text-gold-gradient">Difference</span>
           </h2>
-          <p className="mt-4 text-base max-w-xl mx-auto" style={{ color: "#8a7a6a" }}>
+          <p className="text-base max-w-xl mx-auto" style={{ color: "#7A6A5A" }}>
             There are places to eat and drink in Greer. Then there's The Mason Jar.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {REASONS.map((reason) => (
             <div
               key={reason.title}
-              className="p-6 rounded-2xl"
+              className="card-lift p-7 rounded-2xl"
               style={{
-                backgroundColor: "rgba(61,43,31,0.3)",
-                border: "1px solid rgba(193,127,36,0.1)",
+                background:
+                  "linear-gradient(145deg, rgba(216,155,60,0.05) 0%, rgba(26,14,6,0.75) 100%)",
+                border: "1px solid rgba(216,155,60,0.14)",
+                boxShadow:
+                  "0 6px 24px rgba(0,0,0,0.38), inset 0 1px 0 rgba(216,155,60,0.06)",
               }}
             >
               <div className="text-3xl mb-4" aria-hidden="true">{reason.icon}</div>
@@ -76,12 +88,12 @@ export function WhyLocals() {
                 className="text-lg font-bold mb-3"
                 style={{
                   fontFamily: "'Playfair Display', Georgia, serif",
-                  color: "#f5efe0",
+                  color: "#F6EFE0",
                 }}
               >
                 {reason.title}
               </h3>
-              <p className="text-sm leading-relaxed" style={{ color: "#8a7a6a" }}>
+              <p className="text-sm leading-relaxed" style={{ color: "#7A6A5A" }}>
                 {reason.body}
               </p>
             </div>

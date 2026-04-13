@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const HIGHLIGHTS = [
   {
@@ -26,30 +25,48 @@ const HIGHLIGHTS = [
 
 export function IntroSection() {
   return (
-    <section className="section-pad" style={{ backgroundColor: "#1a1208" }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      className="section-pad relative overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(180deg, #0E0905 0%, #180D06 40%, #221208 80%, #180D06 100%)",
+      }}
+    >
+      {/* Ambient glow — right side */}
+      <div
+        className="absolute top-0 right-0 w-[500px] h-[500px] pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse at top right, rgba(216,155,60,0.08) 0%, transparent 65%)",
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
           {/* Left — Text */}
           <div>
-            <p
-              className="text-sm font-semibold tracking-widest uppercase mb-4"
-              style={{ color: "#c17f24" }}
-            >
-              Who We Are
-            </p>
+            <p className="eyebrow mb-4">Who We Are</p>
             <h2
               className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
               style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
-                color: "#f5efe0",
+                color: "#F6EFE0",
               }}
             >
               Greer's Favorite<br />
-              <span style={{ color: "#c17f24" }}>Bar & Grill</span>
+              <span className="text-gold-gradient">Bar &amp; Grill</span>
             </h2>
+
+            {/* Left accent bar */}
+            <div
+              className="w-12 h-0.5 mb-6 rounded-full"
+              style={{ background: "linear-gradient(90deg, #D89B3C, transparent)" }}
+            />
+
             <p
               className="text-lg leading-relaxed mb-4"
-              style={{ color: "#e8dcc8" }}
+              style={{ color: "#D9CCBA" }}
             >
               Tucked into the heart of downtown Greer, The Mason Jar has been
               a gathering place for locals who know where to find a great meal,
@@ -58,27 +75,22 @@ export function IntroSection() {
             </p>
             <p
               className="text-base leading-relaxed mb-8"
-              style={{ color: "#8a7a6a" }}
+              style={{ color: "#7A6A5A" }}
             >
               Whether you're here for a weeknight bite, a Friday night out, or
-              our legendary karaoke sessions — The Mason Jar is your spot. Come
-              as you are. Stay as long as you like.
+              our legendary karaoke sessions — The Mason Jar is your spot.
+              Come as you are. Stay as long as you like.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-base transition-colors"
-                style={{ backgroundColor: "#c17f24", color: "#1a1208" }}
+                className="btn-gold inline-flex items-center justify-center px-7 py-3 rounded-xl text-base"
               >
                 Our Story
               </Link>
               <Link
                 href="/menu"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-base border-2 transition-colors"
-                style={{
-                  borderColor: "rgba(193,127,36,0.4)",
-                  color: "#f5efe0",
-                }}
+                className="btn-outline-gold inline-flex items-center justify-center px-7 py-3 rounded-xl font-semibold text-base"
               >
                 See the Menu
               </Link>
@@ -86,24 +98,26 @@ export function IntroSection() {
           </div>
 
           {/* Right — Highlights Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {HIGHLIGHTS.map((item) => (
               <div
                 key={item.label}
-                className="p-6 rounded-2xl"
+                className="card-lift p-6 rounded-2xl"
                 style={{
-                  backgroundColor: "rgba(61,43,31,0.4)",
-                  border: "1px solid rgba(193,127,36,0.15)",
+                  background:
+                    "linear-gradient(145deg, rgba(216,155,60,0.06) 0%, rgba(30,18,8,0.7) 100%)",
+                  border: "1px solid rgba(216,155,60,0.18)",
+                  boxShadow: "0 4px 20px rgba(0,0,0,0.35), inset 0 1px 0 rgba(216,155,60,0.08)",
                 }}
               >
-                <div className="text-3xl mb-3">{item.icon}</div>
+                <div className="text-3xl mb-3" aria-hidden="true">{item.icon}</div>
                 <h3
                   className="text-base font-semibold mb-2"
-                  style={{ color: "#f5efe0" }}
+                  style={{ color: "#F6EFE0" }}
                 >
                   {item.label}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "#8a7a6a" }}>
+                <p className="text-sm leading-relaxed" style={{ color: "#7A6A5A" }}>
                   {item.description}
                 </p>
               </div>

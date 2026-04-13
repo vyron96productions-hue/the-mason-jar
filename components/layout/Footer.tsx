@@ -16,7 +16,7 @@ export function Footer() {
     <footer
       className="border-t"
       style={{
-        backgroundColor: "#0f0b06",
+        backgroundColor: "#090603",
         borderColor: "rgba(193,127,36,0.15)",
       }}
     >
@@ -28,7 +28,7 @@ export function Footer() {
               className="text-2xl font-bold mb-2"
               style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
-                color: "#c17f24",
+                color: "#D89B3C",
               }}
             >
               The Mason Jar
@@ -50,7 +50,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors"
-                style={{ backgroundColor: "rgba(193,127,36,0.1)", color: "#c17f24" }}
+                style={{ backgroundColor: "rgba(193,127,36,0.1)", color: "#D89B3C" }}
                 aria-label="The Mason Jar on Facebook"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -62,7 +62,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors"
-                style={{ backgroundColor: "rgba(193,127,36,0.1)", color: "#c17f24" }}
+                style={{ backgroundColor: "rgba(193,127,36,0.1)", color: "#D89B3C" }}
                 aria-label="The Mason Jar on Instagram"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -76,7 +76,7 @@ export function Footer() {
           <div>
             <h4
               className="text-sm font-semibold tracking-widest uppercase mb-6"
-              style={{ color: "#c17f24" }}
+              style={{ color: "#D89B3C" }}
             >
               Quick Links
             </h4>
@@ -99,7 +99,7 @@ export function Footer() {
           <div>
             <h4
               className="text-sm font-semibold tracking-widest uppercase mb-6"
-              style={{ color: "#c17f24" }}
+              style={{ color: "#D89B3C" }}
             >
               Find Us
             </h4>
@@ -119,7 +119,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-sm transition-colors"
-                style={{ color: "#c17f24" }}
+                style={{ color: "#D89B3C" }}
               >
                 Get Directions →
               </a>

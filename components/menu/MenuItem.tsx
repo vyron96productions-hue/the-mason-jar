@@ -21,7 +21,7 @@ export function MenuItemCard({ item }: MenuItemProps) {
         <div className="flex items-center gap-2 mb-1 flex-wrap">
           <h3
             className="text-base font-semibold"
-            style={{ color: "#f5efe0" }}
+            style={{ color: "#F6EFE0" }}
           >
             {item.name}
           </h3>
@@ -32,13 +32,13 @@ export function MenuItemCard({ item }: MenuItemProps) {
             />
           )}
         </div>
-        <p className="text-sm leading-relaxed" style={{ color: "#8a7a6a" }}>
+        <p className="text-sm leading-relaxed" style={{ color: "#8A7A6A" }}>
           {item.description}
         </p>
       </div>
       <span
         className="text-base font-bold shrink-0"
-        style={{ color: "#c17f24" }}
+        style={{ color: "#D89B3C" }}
       >
         {item.price}
       </span>

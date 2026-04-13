@@ -20,7 +20,7 @@ export function EventCard({ event }: EventCardProps) {
             className="text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full"
             style={{
               backgroundColor: "rgba(193,127,36,0.15)",
-              color: "#c17f24",
+              color: "#D89B3C",
               border: "1px solid rgba(193,127,36,0.3)",
             }}
           >
@@ -31,7 +31,7 @@ export function EventCard({ event }: EventCardProps) {
       <div>
         <p
           className="text-xs font-semibold tracking-widest uppercase mb-1"
-          style={{ color: "#c17f24" }}
+          style={{ color: "#D89B3C" }}
         >
           {event.day}
         </p>
@@ -39,16 +39,16 @@ export function EventCard({ event }: EventCardProps) {
           className="text-2xl font-bold mb-1"
           style={{
             fontFamily: "'Playfair Display', Georgia, serif",
-            color: "#f5efe0",
+            color: "#F6EFE0",
           }}
         >
           {event.title}
         </h3>
-        <p className="text-sm" style={{ color: "#8a7a6a" }}>
+        <p className="text-sm" style={{ color: "#8A7A6A" }}>
           {event.time}
         </p>
       </div>
-      <p className="text-sm leading-relaxed" style={{ color: "#8a7a6a" }}>
+      <p className="text-sm leading-relaxed" style={{ color: "#8A7A6A" }}>
         {event.description}
       </p>
     </article>

@@ -29,14 +29,16 @@ export function Navbar() {
     setMenuOpen(false);
   }, [pathname]);
 
-  const navBg = scrolled || menuOpen
-    ? "bg-brown-deep/98 backdrop-blur-sm shadow-lg shadow-black/30"
-    : "bg-transparent";
+  const solid = scrolled || menuOpen;
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}
-      style={scrolled || menuOpen ? { backgroundColor: "rgba(26,18,8,0.98)" } : {}}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300`}
+      style={{
+        backgroundColor: solid ? "rgba(12,8,3,0.96)" : "transparent",
+        backdropFilter: solid ? "blur(12px)" : "none",
+        boxShadow: solid ? "0 1px 0 rgba(216,155,60,0.12), 0 8px 32px rgba(0,0,0,0.4)" : "none",
+      }}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -46,7 +48,7 @@ export function Navbar() {
               className="text-xl md:text-2xl font-bold tracking-tight group-hover:text-amber-light transition-colors"
               style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
-                color: "#c17f24",
+                color: "#D89B3C",
               }}
             >
               The Mason Jar
@@ -70,7 +72,7 @@ export function Navbar() {
                       : "text-cream hover:text-amber-light hover:bg-white/5"
                   }`}
                   style={{
-                    color: active ? "#e8a842" : "#f5efe0",
+                    color: active ? "#F2B857" : "#f5efe0",
                   }}
                 >
                   {link.label}
@@ -85,16 +87,16 @@ export function Navbar() {
               href={SITE_CONFIG.phone.href}
               className="text-sm font-semibold px-4 py-2 rounded-lg border-2 transition-colors"
               style={{
-                borderColor: "#c17f24",
-                color: "#c17f24",
+                borderColor: "#D89B3C",
+                color: "#D89B3C",
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#c17f24";
-                (e.currentTarget as HTMLAnchorElement).style.color = "#1a1208";
+                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#D89B3C";
+                (e.currentTarget as HTMLAnchorElement).style.color = "#0E0905";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "transparent";
-                (e.currentTarget as HTMLAnchorElement).style.color = "#c17f24";
+                (e.currentTarget as HTMLAnchorElement).style.color = "#D89B3C";
               }}
             >
               {SITE_CONFIG.phone.display}
@@ -149,7 +151,7 @@ export function Navbar() {
                     href={link.href}
                     className="px-4 py-3 text-base font-medium rounded-lg transition-colors"
                     style={{
-                      color: active ? "#e8a842" : "#f5efe0",
+                      color: active ? "#F2B857" : "#f5efe0",
                       backgroundColor: active ? "rgba(255,255,255,0.05)" : "transparent",
                     }}
                   >
@@ -162,8 +164,8 @@ export function Navbar() {
               href={SITE_CONFIG.phone.href}
               className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-base"
               style={{
-                backgroundColor: "#c17f24",
-                color: "#1a1208",
+                backgroundColor: "#D89B3C",
+                color: "#0E0905",
               }}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

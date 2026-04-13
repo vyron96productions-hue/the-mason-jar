@@ -8,7 +8,7 @@ export function HoursTable() {
     <div>
       <h3
         className="text-sm font-semibold tracking-widest uppercase mb-4"
-        style={{ color: "#c17f24" }}
+        style={{ color: "#D89B3C" }}
       >
         Hours
       </h3>
@@ -32,7 +32,7 @@ export function HoursTable() {
             >
               <span
                 className="text-sm font-medium"
-                style={{ color: isToday ? "#e8a842" : "#f5efe0" }}
+                style={{ color: isToday ? "#F2B857" : "#F6EFE0" }}
               >
                 {day}
                 {isToday && (
@@ -40,14 +40,14 @@ export function HoursTable() {
                     className="ml-2 text-xs px-2 py-0.5 rounded-full"
                     style={{
                       backgroundColor: "rgba(193,127,36,0.2)",
-                      color: "#c17f24",
+                      color: "#D89B3C",
                     }}
                   >
                     Today
                   </span>
                 )}
               </span>
-              <span className="text-sm" style={{ color: "#8a7a6a" }}>
+              <span className="text-sm" style={{ color: "#8A7A6A" }}>
                 {open} – {close}
               </span>
             </li>

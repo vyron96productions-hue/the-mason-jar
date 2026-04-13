@@ -21,7 +21,7 @@ const CATEGORY_IDS = MENU_CATEGORIES.map((c) => ({ id: c.id, label: c.label }));
 
 export default function MenuPage() {
   return (
-    <div style={{ backgroundColor: "#1a1208", minHeight: "100vh" }}>
+    <div style={{ backgroundColor: "#0E0905", minHeight: "100vh" }}>
       {/* Page Header */}
       <div
         className="pt-32 pb-12 text-center relative overflow-hidden"
@@ -40,7 +40,7 @@ export default function MenuPage() {
         <div className="relative z-10 max-w-3xl mx-auto px-4">
           <p
             className="text-sm font-semibold tracking-widest uppercase mb-3"
-            style={{ color: "#c17f24" }}
+            style={{ color: "#D89B3C" }}
           >
             The Mason Jar
           </p>
@@ -48,15 +48,15 @@ export default function MenuPage() {
             className="text-5xl md:text-6xl font-bold mb-4"
             style={{
               fontFamily: "'Playfair Display', Georgia, serif",
-              color: "#f5efe0",
+              color: "#F6EFE0",
             }}
           >
             Our Menu
           </h1>
-          <p className="text-base md:text-lg" style={{ color: "#8a7a6a" }}>
+          <p className="text-base md:text-lg" style={{ color: "#8A7A6A" }}>
             Hand-pressed burgers, slow-smoked ribs, craft cocktails, and more. Made fresh, every order.
           </p>
-          <p className="mt-2 text-sm" style={{ color: "#5c3d2e" }}>
+          <p className="mt-2 text-sm" style={{ color: "#3A2210" }}>
             Prices subject to change. Ask your server about daily specials.
           </p>
         </div>
@@ -78,7 +78,7 @@ export default function MenuPage() {
               key={cat.id}
               href={`#${cat.id}`}
               className="px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors"
-              style={{ color: "#8a7a6a" }}
+              style={{ color: "#8A7A6A" }}
             >
               {cat.label}
             </a>
@@ -100,13 +100,13 @@ export default function MenuPage() {
             border: "1px solid rgba(193,127,36,0.1)",
           }}
         >
-          <p className="text-sm mb-2" style={{ color: "#8a7a6a" }}>
+          <p className="text-sm mb-2" style={{ color: "#8A7A6A" }}>
             Menu items and prices subject to change. Please inform your server of any allergies.
           </p>
           <a
             href={SITE_CONFIG.phone.href}
             className="text-sm font-semibold"
-            style={{ color: "#c17f24" }}
+            style={{ color: "#D89B3C" }}
           >
             Questions? Call us at {SITE_CONFIG.phone.display}
           </a>

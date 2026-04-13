@@ -18,13 +18,13 @@ export function MenuSection({ category }: MenuSectionProps) {
           className="text-3xl font-bold mb-1"
           style={{
             fontFamily: "'Playfair Display', Georgia, serif",
-            color: "#f5efe0",
+            color: "#F6EFE0",
           }}
         >
           {category.label}
         </h2>
         {category.description && (
-          <p className="text-sm" style={{ color: "#8a7a6a" }}>
+          <p className="text-sm" style={{ color: "#8A7A6A" }}>
             {category.description}
           </p>
         )}

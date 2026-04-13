@@ -18,7 +18,7 @@ export function GalleryGrid({ images, label }: GalleryGridProps) {
         className="text-2xl font-bold mb-6"
         style={{
           fontFamily: "'Playfair Display', Georgia, serif",
-          color: "#f5efe0",
+          color: "#F6EFE0",
         }}
       >
         {label}
@@ -44,7 +44,7 @@ export function GalleryGrid({ images, label }: GalleryGridProps) {
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                style={{ color: "#c17f24" }}
+                style={{ color: "#D89B3C" }}
               >
                 <path
                   strokeLinecap="round"
@@ -55,7 +55,7 @@ export function GalleryGrid({ images, label }: GalleryGridProps) {
               </svg>
               <p
                 className="text-xs text-center leading-tight opacity-40"
-                style={{ color: "#f5efe0" }}
+                style={{ color: "#F6EFE0" }}
               >
                 {img.alt}
               </p>

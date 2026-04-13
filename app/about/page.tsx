@@ -41,7 +41,7 @@ const VALUES = [
 
 export default function AboutPage() {
   return (
-    <div style={{ backgroundColor: "#1a1208", minHeight: "100vh" }}>
+    <div style={{ backgroundColor: "#0E0905", minHeight: "100vh" }}>
       {/* Header */}
       <div
         className="pt-32 pb-16 relative overflow-hidden"
@@ -57,7 +57,7 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <p
             className="text-sm font-semibold tracking-widest uppercase mb-3"
-            style={{ color: "#c17f24" }}
+            style={{ color: "#D89B3C" }}
           >
             Our Story
           </p>
@@ -65,13 +65,13 @@ export default function AboutPage() {
             className="text-5xl md:text-6xl font-bold mb-6"
             style={{
               fontFamily: "'Playfair Display', Georgia, serif",
-              color: "#f5efe0",
+              color: "#F6EFE0",
             }}
           >
             More Than a Bar.<br />
-            <span style={{ color: "#c17f24" }}>A Greer Institution.</span>
+            <span style={{ color: "#D89B3C" }}>A Greer Institution.</span>
           </h1>
-          <p className="text-base md:text-lg max-w-2xl mx-auto leading-relaxed" style={{ color: "#8a7a6a" }}>
+          <p className="text-base md:text-lg max-w-2xl mx-auto leading-relaxed" style={{ color: "#8A7A6A" }}>
             The Mason Jar isn't just a place to eat and drink. It's a place to belong. Right here on Trade Street in the heart of downtown Greer, South Carolina.
           </p>
         </div>
@@ -93,10 +93,10 @@ export default function AboutPage() {
           >
             <div className="text-center p-8">
               <div className="text-5xl mb-4" aria-hidden="true">🍺</div>
-              <p className="text-sm" style={{ color: "#5c3d2e" }}>
+              <p className="text-sm" style={{ color: "#3A2210" }}>
                 Interior photo coming soon
               </p>
-              <p className="text-xs mt-1" style={{ color: "#3d2b1f" }}>
+              <p className="text-xs mt-1" style={{ color: "#2C1808" }}>
                 Replace: public/images/gallery/interior.jpg
               </p>
             </div>
@@ -108,12 +108,12 @@ export default function AboutPage() {
               className="text-3xl md:text-4xl font-bold mb-6"
               style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
-                color: "#f5efe0",
+                color: "#F6EFE0",
               }}
             >
               Born in Downtown Greer
             </h2>
-            <div className="space-y-4" style={{ color: "#8a7a6a" }}>
+            <div className="space-y-4" style={{ color: "#8A7A6A" }}>
               <p className="text-base leading-relaxed">
                 The Mason Jar was built for Greer — and built on Trade Street for good reason. We sit in the middle of one of Upstate South Carolina's most exciting and growing downtowns, and we like to think we've been part of making it that way.
               </p>
@@ -134,7 +134,7 @@ export default function AboutPage() {
               className="text-3xl md:text-4xl font-bold"
               style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
-                color: "#f5efe0",
+                color: "#F6EFE0",
               }}
             >
               What We Stand For
@@ -155,12 +155,12 @@ export default function AboutPage() {
                   className="text-lg font-bold mb-3"
                   style={{
                     fontFamily: "'Playfair Display', Georgia, serif",
-                    color: "#f5efe0",
+                    color: "#F6EFE0",
                   }}
                 >
                   {val.title}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "#8a7a6a" }}>
+                <p className="text-sm leading-relaxed" style={{ color: "#8A7A6A" }}>
                   {val.body}
                 </p>
               </div>
@@ -181,29 +181,29 @@ export default function AboutPage() {
             className="text-3xl md:text-4xl font-bold mb-4"
             style={{
               fontFamily: "'Playfair Display', Georgia, serif",
-              color: "#f5efe0",
+              color: "#F6EFE0",
             }}
           >
             Come Find Us
           </h2>
-          <p className="text-base mb-2" style={{ color: "#8a7a6a" }}>
+          <p className="text-base mb-2" style={{ color: "#8A7A6A" }}>
             202 Trade St, Greer, SC 29651
           </p>
-          <p className="text-base mb-8" style={{ color: "#8a7a6a" }}>
+          <p className="text-base mb-8" style={{ color: "#8A7A6A" }}>
             Open daily starting at 11 AM · Friday & Saturday until 2 AM
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-base transition-colors"
-              style={{ backgroundColor: "#c17f24", color: "#1a1208" }}
+              style={{ backgroundColor: "#D89B3C", color: "#0E0905" }}
             >
               Get Directions & Hours
             </Link>
             <a
               href={SITE_CONFIG.phone.href}
               className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-base border-2 transition-colors"
-              style={{ borderColor: "rgba(193,127,36,0.5)", color: "#f5efe0" }}
+              style={{ borderColor: "rgba(193,127,36,0.5)", color: "#F6EFE0" }}
             >
               {SITE_CONFIG.phone.display}
             </a>

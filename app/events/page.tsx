@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function EventsPage() {
   return (
-    <div style={{ backgroundColor: "#1a1208", minHeight: "100vh" }}>
+    <div style={{ backgroundColor: "#0E0905", minHeight: "100vh" }}>
       {/* Page Header */}
       <div
         className="pt-32 pb-16 text-center relative overflow-hidden"
@@ -38,7 +38,7 @@ export default function EventsPage() {
         <div className="relative z-10 max-w-3xl mx-auto px-4">
           <p
             className="text-sm font-semibold tracking-widest uppercase mb-3"
-            style={{ color: "#c17f24" }}
+            style={{ color: "#D89B3C" }}
           >
             Live. Every Week.
           </p>
@@ -46,13 +46,13 @@ export default function EventsPage() {
             className="text-5xl md:text-6xl font-bold mb-4"
             style={{
               fontFamily: "'Playfair Display', Georgia, serif",
-              color: "#f5efe0",
+              color: "#F6EFE0",
             }}
           >
             Events at<br />
-            <span style={{ color: "#c17f24" }}>The Mason Jar</span>
+            <span style={{ color: "#D89B3C" }}>The Mason Jar</span>
           </h1>
-          <p className="text-base md:text-lg max-w-xl mx-auto" style={{ color: "#8a7a6a" }}>
+          <p className="text-base md:text-lg max-w-xl mx-auto" style={{ color: "#8A7A6A" }}>
             Something's always going on at The Mason Jar. From Friday night karaoke to weekday specials — here's your guide to the week.
           </p>
         </div>
@@ -71,7 +71,7 @@ export default function EventsPage() {
           <div className="text-6xl mb-4" aria-hidden="true">🎤</div>
           <p
             className="text-sm font-semibold tracking-widest uppercase mb-3"
-            style={{ color: "#c17f24" }}
+            style={{ color: "#D89B3C" }}
           >
             Every Friday & Saturday
           </p>
@@ -79,12 +79,12 @@ export default function EventsPage() {
             className="text-3xl md:text-4xl font-bold mb-4"
             style={{
               fontFamily: "'Playfair Display', Georgia, serif",
-              color: "#f5efe0",
+              color: "#F6EFE0",
             }}
           >
             Karaoke Night — 9 PM to Close
           </h2>
-          <p className="text-base max-w-xl mx-auto" style={{ color: "#8a7a6a" }}>
+          <p className="text-base max-w-xl mx-auto" style={{ color: "#8A7A6A" }}>
             The most fun night out in downtown Greer. Pick your song, take the stage, and let The Mason Jar crowd be your biggest fan. No cover, no judgment — just a great time.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
@@ -93,7 +93,7 @@ export default function EventsPage() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-colors"
-              style={{ backgroundColor: "#c17f24", color: "#1a1208" }}
+              style={{ backgroundColor: "#D89B3C", color: "#0E0905" }}
             >
               Follow on Facebook for Updates
             </a>
@@ -105,7 +105,7 @@ export default function EventsPage() {
           <div className="mb-8">
             <p
               className="text-sm font-semibold tracking-widest uppercase mb-2"
-              style={{ color: "#c17f24" }}
+              style={{ color: "#D89B3C" }}
             >
               Recurring Events
             </p>
@@ -113,7 +113,7 @@ export default function EventsPage() {
               className="text-3xl md:text-4xl font-bold"
               style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
-                color: "#f5efe0",
+                color: "#F6EFE0",
               }}
             >
               Weekly Schedule
@@ -131,7 +131,7 @@ export default function EventsPage() {
           <div className="mb-8">
             <p
               className="text-sm font-semibold tracking-widest uppercase mb-2"
-              style={{ color: "#c17f24" }}
+              style={{ color: "#D89B3C" }}
             >
               Special Events
             </p>
@@ -139,7 +139,7 @@ export default function EventsPage() {
               className="text-3xl md:text-4xl font-bold"
               style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
-                color: "#f5efe0",
+                color: "#F6EFE0",
               }}
             >
               Live Music, Sports & More
@@ -164,12 +164,12 @@ export default function EventsPage() {
             className="text-2xl font-bold mb-3"
             style={{
               fontFamily: "'Playfair Display', Georgia, serif",
-              color: "#f5efe0",
+              color: "#F6EFE0",
             }}
           >
             Never Miss a Night
           </h3>
-          <p className="text-sm mb-6" style={{ color: "#8a7a6a" }}>
+          <p className="text-sm mb-6" style={{ color: "#8A7A6A" }}>
             Follow us on Facebook for last-minute announcements, event updates, and nightly specials. We post everything there first.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -178,7 +178,7 @@ export default function EventsPage() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-colors"
-              style={{ backgroundColor: "#c17f24", color: "#1a1208" }}
+              style={{ backgroundColor: "#D89B3C", color: "#0E0905" }}
             >
               Follow on Facebook
             </a>
@@ -187,7 +187,7 @@ export default function EventsPage() {
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm border-2 transition-colors"
               style={{
                 borderColor: "rgba(193,127,36,0.4)",
-                color: "#f5efe0",
+                color: "#F6EFE0",
               }}
             >
               Call {SITE_CONFIG.phone.display}
