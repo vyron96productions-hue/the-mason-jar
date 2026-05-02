@@ -1,4 +1,4 @@
-export const GTM_ID = "GTM-XXXXXXX"; // ← swap in real ID when ready
+export const GTM_ID = "GTM-TB3VRXK8";
 
 declare global {
   interface Window {
