@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { SITE_CONFIG } from "@/lib/site-config";
-import { trackPhoneClick } from "@/lib/gtm";
+import { trackPhoneClick, trackNavClick } from "@/lib/gtm";
 
 const NAV_LINKS = [
   { label: "Menu", href: "/menu" },
@@ -17,6 +17,7 @@ const NAV_LINKS = [
 
 export function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -87,6 +88,11 @@ export function Navbar() {
                   }`}
                   style={{
                     color: active ? "#F2B857" : "#f5efe0",
+                  }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    trackNavClick(link.label, link.href, "navbar");
+                    setTimeout(() => router.push(link.href), 100);
                   }}
                 >
                   {link.label}
@@ -168,6 +174,11 @@ export function Navbar() {
                     style={{
                       color: active ? "#F2B857" : "#f5efe0",
                       backgroundColor: active ? "rgba(255,255,255,0.05)" : "transparent",
+                    }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      trackNavClick(link.label, link.href, "navbar_mobile");
+                      setTimeout(() => router.push(link.href), 100);
                     }}
                   >
                     {link.label}

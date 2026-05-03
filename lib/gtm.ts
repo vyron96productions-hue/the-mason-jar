@@ -33,3 +33,7 @@ export function trackCTAClick(label: string, destination: string) {
 export function trackMenuCategoryClick(category: string) {
   pushEvent({ event: "menu_category_click", category });
 }
+
+export function trackNavClick(label: string, destination: string, source: "navbar" | "navbar_mobile") {
+  pushEvent({ event: "nav_click", nav_label: label, destination, click_source: source });
+}
