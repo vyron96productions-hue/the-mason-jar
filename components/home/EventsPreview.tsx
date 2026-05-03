@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 import { WEEKLY_EVENTS } from "@/lib/events-data";
 
 export function EventsPreview() {
@@ -42,14 +42,15 @@ export function EventsPreview() {
               <span className="text-gold-gradient">of the Week</span>
             </h2>
           </div>
-          <Link
+          <TrackedLink
             href="/events"
             className="inline-flex items-center gap-1 text-sm font-semibold transition-colors duration-200 shrink-0 group"
             style={{ color: "#D89B3C" }}
+            gtmEvent={{ event: "cta_click", cta_label: "See All Events", destination: "/events" }}
           >
             See All Events
             <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
-          </Link>
+          </TrackedLink>
         </div>
 
         {/* Event cards */}
@@ -126,12 +127,13 @@ export function EventsPreview() {
               This crowd is on your side.
             </p>
           </div>
-          <Link
+          <TrackedLink
             href="/events"
             className="btn-gold inline-flex items-center justify-center gap-2 px-7 py-3 rounded-xl font-semibold text-sm whitespace-nowrap shrink-0 relative z-10"
+            gtmEvent={{ event: "cta_click", cta_label: "See All Events", destination: "/events" }}
           >
             See All Events
-          </Link>
+          </TrackedLink>
         </div>
       </div>
     </section>

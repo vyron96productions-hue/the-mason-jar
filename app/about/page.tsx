@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/site-config";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 
 export const metadata: Metadata = {
   title: "About — Your Downtown Greer Neighborhood Bar & Grill",
@@ -193,13 +193,14 @@ export default function AboutPage() {
             Open daily starting at 11 AM · Friday & Saturday until 2 AM
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link
+            <TrackedLink
               href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-base transition-colors"
               style={{ backgroundColor: "#D89B3C", color: "#0E0905" }}
+              gtmEvent={{ event: "cta_click", cta_label: "Get Directions & Hours", destination: "/contact" }}
             >
               Get Directions & Hours
-            </Link>
+            </TrackedLink>
             <a
               href={SITE_CONFIG.phone.href}
               className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-base border-2 transition-colors"

@@ -3,6 +3,7 @@ import { MENU_CATEGORIES } from "@/lib/menu-data";
 import { MenuSection } from "@/components/menu/MenuSection";
 import { BarGuardBadge } from "@/components/ui/BarGuardBadge";
 import { SITE_CONFIG } from "@/lib/site-config";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Menu — Burgers, Wings, Ribs & Cocktails",
@@ -78,14 +79,15 @@ export default function MenuPage() {
       >
         <div className="max-w-7xl mx-auto px-4 flex gap-2 min-w-max">
           {CATEGORY_IDS.map((cat) => (
-            <a
+            <TrackedLink
               key={cat.id}
               href={`#${cat.id}`}
               className="px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors"
               style={{ color: "#8A7A6A" }}
+              gtmEvent={{ event: "menu_category_click", category: cat.label }}
             >
               {cat.label}
-            </a>
+            </TrackedLink>
           ))}
         </div>
       </nav>

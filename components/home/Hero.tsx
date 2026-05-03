@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/site-config";
 import { TrackedLink } from "@/components/ui/TrackedLink";
 
@@ -120,12 +119,13 @@ export function Hero() {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fade-in-up animate-delay-400">
-          <Link
+          <TrackedLink
             href="/menu"
             className="btn-gold inline-flex items-center justify-center gap-2 px-9 py-4 text-base rounded-xl w-full sm:w-auto"
+            gtmEvent={{ event: "cta_click", cta_label: "View Our Menu", destination: "/menu" }}
           >
             View Our Menu
-          </Link>
+          </TrackedLink>
           <TrackedLink
             href={SITE_CONFIG.address.googleMapsUrl}
             target="_blank"

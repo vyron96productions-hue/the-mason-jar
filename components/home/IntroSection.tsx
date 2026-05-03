@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 
 const HIGHLIGHTS = [
   {
@@ -82,18 +82,20 @@ export function IntroSection() {
               Come as you are. Stay as long as you like.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <TrackedLink
                 href="/about"
                 className="btn-gold inline-flex items-center justify-center px-7 py-3 rounded-xl text-base"
+                gtmEvent={{ event: "cta_click", cta_label: "Our Story", destination: "/about" }}
               >
                 Our Story
-              </Link>
-              <Link
+              </TrackedLink>
+              <TrackedLink
                 href="/menu"
                 className="btn-outline-gold inline-flex items-center justify-center px-7 py-3 rounded-xl font-semibold text-base"
+                gtmEvent={{ event: "cta_click", cta_label: "See the Menu", destination: "/menu" }}
               >
                 See the Menu
-              </Link>
+              </TrackedLink>
             </div>
           </div>
 

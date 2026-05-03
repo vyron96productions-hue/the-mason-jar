@@ -1,4 +1,5 @@
 import { MapEmbed } from "@/components/contact/MapEmbed";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 import { SITE_CONFIG } from "@/lib/site-config";
 
 export function HomeMapStrip() {
@@ -47,13 +48,14 @@ export function HomeMapStrip() {
                 The Mason Jar Bar &amp; Grill
               </p>
               <p style={{ color: "#8A7A6A" }}>202 Trade St, Greer, SC 29651</p>
-              <a
+              <TrackedLink
                 href={SITE_CONFIG.phone.href}
                 className="block font-semibold transition-colors duration-200"
                 style={{ color: "#D89B3C" }}
+                gtmEvent={{ event: "phone_click", click_source: "home_map_strip" }}
               >
                 {SITE_CONFIG.phone.display}
-              </a>
+              </TrackedLink>
             </address>
 
             <div className="space-y-3 mb-8" style={{ color: "#7A6A5A" }}>
@@ -76,27 +78,29 @@ export function HomeMapStrip() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <a
+              <TrackedLink
                 href={SITE_CONFIG.address.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold inline-flex items-center justify-center gap-2 px-7 py-3 rounded-xl font-semibold text-sm"
+                gtmEvent={{ event: "directions_click", click_source: "home_map_strip" }}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 Get Directions
-              </a>
-              <a
+              </TrackedLink>
+              <TrackedLink
                 href={SITE_CONFIG.phone.href}
                 className="btn-outline-gold inline-flex items-center justify-center gap-2 px-7 py-3 rounded-xl font-semibold text-sm"
+                gtmEvent={{ event: "phone_click", click_source: "home_map_strip" }}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 Call Us
-              </a>
+              </TrackedLink>
             </div>
           </div>
 

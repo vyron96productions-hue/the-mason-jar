@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 
 const FEATURED = [
   {
@@ -151,12 +151,13 @@ export function FeaturedItems() {
 
         {/* CTA */}
         <div className="text-center">
-          <Link
+          <TrackedLink
             href="/menu"
             className="btn-gold inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl font-semibold text-base"
+            gtmEvent={{ event: "cta_click", cta_label: "View Full Menu", destination: "/menu" }}
           >
             View Full Menu →
-          </Link>
+          </TrackedLink>
         </div>
       </div>
     </section>
