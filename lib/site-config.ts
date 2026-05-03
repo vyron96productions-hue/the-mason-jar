@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   tagline: "Bar & Grill in Downtown Greer, SC",
   description:
     "The Mason Jar is Greer's favorite bar and grill — great food, cold drinks, live events, and karaoke in the heart of downtown. Come hungry, leave happy.",
-  url: "https://www.themasonjargreer.com",
+  url: "https://themasonjargreer.com",
 
   // NAP — Name, Address, Phone
   address: {
