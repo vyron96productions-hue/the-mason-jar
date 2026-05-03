@@ -6,16 +6,24 @@ import { TrackedLink } from "@/components/ui/TrackedLink";
 import { SITE_CONFIG } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Contact & Visit — Hours, Directions & Location",
+  title: "Hours & Directions in Greer SC",
   description:
     "Visit The Mason Jar at 202 Trade St in downtown Greer, SC. Get directions, see our hours, and find out everything you need to plan your visit.",
   alternates: {
     canonical: `${SITE_CONFIG.url}/contact`,
   },
   openGraph: {
-    title: "Contact & Visit | The Mason Jar Bar & Grill – Greer, SC",
+    title: "Restaurant Hours & Directions in Greer SC | The Mason Jar",
     description:
       "Find The Mason Jar at 202 Trade St in downtown Greer, SC. Hours, directions, phone number, and parking info.",
+    images: [
+      {
+        url: "/images/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "The Mason Jar — 202 Trade St, Downtown Greer, SC",
+      },
+    ],
   },
 };
 
@@ -48,8 +56,8 @@ export default function ContactPage() {
               color: "#F6EFE0",
             }}
           >
-            Visit Us in<br />
-            <span style={{ color: "#D89B3C" }}>Downtown Greer</span>
+            Hours &amp; Directions in<br />
+            <span style={{ color: "#D89B3C" }}>Downtown Greer, SC</span>
           </h1>
           <p className="text-base md:text-lg" style={{ color: "#8A7A6A" }}>
             Right on Trade Street — the heart of downtown Greer, SC. No reservation needed. Just show up.
@@ -236,7 +244,15 @@ export default function ContactPage() {
                 In the Area?
               </h3>
               <p className="text-sm leading-relaxed" style={{ color: "#8A7A6A" }}>
-                The Mason Jar is a short drive from Spartanburg, Greenville, and the entire Upstate South Carolina area. We're a go-to spot for locals and first-timers alike — come see why Greer keeps coming back.
+                The Mason Jar is a short drive from Spartanburg, Greenville, and the entire Upstate South Carolina area. We're the go-to{" "}
+                <TrackedLink
+                  href="/downtown-greer-bar-and-grill"
+                  style={{ color: "#D89B3C" }}
+                  gtmEvent={{ event: "internal_link_click", destination: "/downtown-greer-bar-and-grill" }}
+                >
+                  downtown Greer bar and grill
+                </TrackedLink>{" "}
+                for locals and first-timers alike.
               </p>
             </div>
           </div>

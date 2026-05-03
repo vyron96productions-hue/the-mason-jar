@@ -6,16 +6,24 @@ import { SITE_CONFIG } from "@/lib/site-config";
 import { TrackedLink } from "@/components/ui/TrackedLink";
 
 export const metadata: Metadata = {
-  title: "Menu — Burgers, Wings, Ribs & Cocktails",
+  title: "Greer SC Bar & Grill Menu",
   description:
     "View the full menu at The Mason Jar in Greer, SC. Hand-pressed burgers, slow-smoked ribs, chicken sandwiches, wraps, craft cocktails, and daily specials.",
   alternates: {
     canonical: `${SITE_CONFIG.url}/menu`,
   },
   openGraph: {
-    title: "Menu | The Mason Jar Bar & Grill – Greer, SC",
+    title: "Greer SC Bar & Grill Menu | The Mason Jar",
     description:
       "Burgers, wings, ribs, wraps, salads, cocktails, and daily specials at The Mason Jar on Trade Street in downtown Greer, South Carolina.",
+    images: [
+      {
+        url: "/images/food/burger-and-beer.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Burger and beer at The Mason Jar — Greer SC bar and grill menu",
+      },
+    ],
   },
 };
 
@@ -53,7 +61,7 @@ export default function MenuPage() {
               color: "#F6EFE0",
             }}
           >
-            Our Menu
+            Greer SC Bar &amp; Grill Menu
           </h1>
           <p className="text-base md:text-lg" style={{ color: "#8A7A6A" }}>
             Hand-pressed burgers, slow-smoked ribs, craft cocktails, and more. Made fresh, every order.

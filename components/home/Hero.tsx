@@ -85,24 +85,31 @@ export function Hero() {
         {/* Main Heading */}
         <h1
           className="font-bold leading-none mb-5 animate-fade-in-up animate-delay-100"
-          style={{
-            fontFamily: "'Playfair Display', Georgia, serif",
-            fontSize: "clamp(3.5rem, 12vw, 7.5rem)",
-            color: "#F6EFE0",
-            textShadow: "0 2px 40px rgba(0,0,0,0.6)",
-          }}
+          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
         >
-          The{" "}
-          <span className="text-gold-gradient">Mason Jar</span>
+          <span
+            className="block"
+            style={{
+              fontSize: "clamp(3.5rem, 12vw, 7.5rem)",
+              color: "#F6EFE0",
+              textShadow: "0 2px 40px rgba(0,0,0,0.6)",
+              lineHeight: 1,
+            }}
+          >
+            The{" "}
+            <span className="text-gold-gradient">Mason Jar</span>
+          </span>
+          <span
+            className="block font-light uppercase mt-3"
+            style={{
+              fontSize: "clamp(0.85rem, 1.8vw, 1.25rem)",
+              color: "rgba(216,155,60,0.7)",
+              letterSpacing: "0.22em",
+            }}
+          >
+            Bar &amp; Grill in Downtown Greer, SC
+          </span>
         </h1>
-
-        {/* Sub-heading */}
-        <p
-          className="text-lg md:text-2xl font-light tracking-[0.22em] uppercase mb-5 animate-fade-in-up animate-delay-200"
-          style={{ color: "rgba(216,155,60,0.7)", letterSpacing: "0.2em" }}
-        >
-          Bar &amp; Grill
-        </p>
 
         {/* Divider */}
         <div className="separator max-w-xs mx-auto mb-7 animate-fade-in-up animate-delay-200">

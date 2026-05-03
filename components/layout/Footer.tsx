@@ -5,10 +5,12 @@ import { SITE_CONFIG } from "@/lib/site-config";
 
 const QUICK_LINKS = [
   { label: "Menu", href: "/menu" },
-  { label: "Events", href: "/events" },
+  { label: "Events & Karaoke", href: "/events" },
+  { label: "Karaoke Nights", href: "/karaoke-greer-sc" },
   { label: "Gallery", href: "/gallery" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact & Hours", href: "/contact" },
+  { label: "Downtown Greer Restaurants", href: "/downtown-greer-restaurants" },
 ];
 
 export function Footer() {

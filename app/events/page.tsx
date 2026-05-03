@@ -6,16 +6,24 @@ import { SpecialEventCard } from "@/components/events/SpecialEventCard";
 import { SITE_CONFIG } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Events — Karaoke, Live Music & Weekly Specials",
+  title: "Karaoke & Events in Greer SC",
   description:
     "See what's happening at The Mason Jar in Greer, SC. Weekly karaoke nights, live music, ladies night, wing nights, game day watch parties, and more.",
   alternates: {
     canonical: `${SITE_CONFIG.url}/events`,
   },
   openGraph: {
-    title: "Events | The Mason Jar Bar & Grill – Greer, SC",
+    title: "Karaoke & Events in Greer SC | The Mason Jar",
     description:
       "Friday and Saturday karaoke, live entertainment, wing nights, ladies nights, and more at The Mason Jar in downtown Greer, SC.",
+    images: [
+      {
+        url: "/images/events/karaoke.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Karaoke night at The Mason Jar — downtown Greer SC events",
+      },
+    ],
   },
 };
 
@@ -50,8 +58,8 @@ export default function EventsPage() {
               color: "#F6EFE0",
             }}
           >
-            Events at<br />
-            <span style={{ color: "#D89B3C" }}>The Mason Jar</span>
+            Karaoke &amp; Events in<br />
+            <span style={{ color: "#D89B3C" }}>Greer, SC</span>
           </h1>
           <p className="text-base md:text-lg max-w-xl mx-auto" style={{ color: "#8A7A6A" }}>
             Something's always going on at The Mason Jar. From Friday night karaoke to weekday specials — here's your guide to the week.
@@ -98,14 +106,23 @@ export default function EventsPage() {
             <p className="text-base max-w-xl mx-auto mb-8" style={{ color: "#D9CCBA" }}>
               The most fun night out in downtown Greer. Pick your song, take the stage, and let The Mason Jar crowd be your biggest fan. No cover, no judgment — just a great time.
             </p>
-            <a
-              href={SITE_CONFIG.social.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold text-sm"
-            >
-              Follow on Facebook for Updates
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-0">
+              <a
+                href="/karaoke-greer-sc"
+                className="btn-gold inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold text-sm"
+              >
+                Karaoke Details
+              </a>
+              <a
+                href={SITE_CONFIG.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold text-sm border-2"
+                style={{ borderColor: "rgba(216,155,60,0.4)", color: "#F6EFE0" }}
+              >
+                Follow on Facebook for Updates
+              </a>
+            </div>
           </div>
         </div>
 

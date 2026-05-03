@@ -3,14 +3,14 @@ import { SITE_CONFIG } from "@/lib/site-config";
 import { TrackedLink } from "@/components/ui/TrackedLink";
 
 export const metadata: Metadata = {
-  title: "About — Your Downtown Greer Neighborhood Bar & Grill",
+  title: "Downtown Greer Neighborhood Bar",
   description:
-    "The Mason Jar is a local bar and grill on Trade Street in downtown Greer, SC — a community gathering spot for great food, cold drinks, and live entertainment.",
+    "Your neighborhood bar and grill on Trade Street in downtown Greer, SC — great food, cold drinks, and live entertainment every night of the week.",
   alternates: {
     canonical: `${SITE_CONFIG.url}/about`,
   },
   openGraph: {
-    title: "About The Mason Jar | Bar & Grill in Downtown Greer, SC",
+    title: "Downtown Greer Neighborhood Bar | The Mason Jar",
     description:
       "Learn the story of The Mason Jar — Greer's neighborhood bar and grill on Trade Street. Great food, cold drinks, and a community that keeps coming back.",
   },
@@ -68,8 +68,8 @@ export default function AboutPage() {
               color: "#F6EFE0",
             }}
           >
-            More Than a Bar.<br />
-            <span style={{ color: "#D89B3C" }}>A Greer Institution.</span>
+            Downtown Greer<br />
+            <span style={{ color: "#D89B3C" }}>Neighborhood Bar &amp; Grill</span>
           </h1>
           <p className="text-base md:text-lg max-w-2xl mx-auto leading-relaxed" style={{ color: "#8A7A6A" }}>
             The Mason Jar isn't just a place to eat and drink. It's a place to belong. Right here on Trade Street in the heart of downtown Greer, South Carolina.
@@ -189,8 +189,19 @@ export default function AboutPage() {
           <p className="text-base mb-2" style={{ color: "#8A7A6A" }}>
             202 Trade St, Greer, SC 29651
           </p>
-          <p className="text-base mb-8" style={{ color: "#8A7A6A" }}>
+          <p className="text-base mb-3" style={{ color: "#8A7A6A" }}>
             Open daily starting at 11 AM · Friday & Saturday until 2 AM
+          </p>
+          <p className="text-sm mb-8" style={{ color: "#8A7A6A" }}>
+            Looking for a great{" "}
+            <TrackedLink
+              href="/downtown-greer-bar-and-grill"
+              style={{ color: "#D89B3C" }}
+              gtmEvent={{ event: "internal_link_click", destination: "/downtown-greer-bar-and-grill" }}
+            >
+              downtown Greer bar and grill
+            </TrackedLink>
+            ? You found it.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <TrackedLink

@@ -9,7 +9,7 @@ import { SITE_CONFIG } from "@/lib/site-config";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
   title: {
-    default: "The Mason Jar Bar & Grill | Downtown Greer, SC",
+    default: "Bar & Grill in Downtown Greer SC | The Mason Jar",
     template: "%s | The Mason Jar – Greer, SC",
   },
   description: SITE_CONFIG.description,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_CONFIG.url,
     siteName: SITE_CONFIG.name,
-    title: "The Mason Jar Bar & Grill | Downtown Greer, SC",
+    title: "Bar & Grill in Downtown Greer SC | The Mason Jar",
     description: SITE_CONFIG.description,
     images: [
       {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Mason Jar Bar & Grill | Downtown Greer, SC",
+    title: "Bar & Grill in Downtown Greer SC | The Mason Jar",
     description: SITE_CONFIG.description,
     images: [SITE_CONFIG.seo.ogImage],
   },
@@ -114,9 +114,24 @@ export default function RootLayout({
         closes: "21:00",
       },
     ],
+    image: `${SITE_CONFIG.url}${SITE_CONFIG.seo.ogImage}`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_CONFIG.url}/images/Logo/logo.png`,
+    },
     servesCuisine: ["American", "Bar Food", "Burgers", "BBQ"],
     menu: `${SITE_CONFIG.url}/menu`,
     hasMap: SITE_CONFIG.address.googleMapsUrl,
+    acceptsReservations: false,
+    areaServed: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: 34.938,
+        longitude: -82.227,
+      },
+      geoRadius: "50000",
+    },
     sameAs: [SITE_CONFIG.social.facebook, SITE_CONFIG.social.instagram],
     priceRange: "$$",
   };

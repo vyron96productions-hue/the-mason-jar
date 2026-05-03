@@ -4,16 +4,24 @@ import { TrackedLink } from "@/components/ui/TrackedLink";
 import { SITE_CONFIG } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Gallery — Food, Drinks & Nightlife Photos",
+  title: "Greer SC Food & Nightlife Photos",
   description:
     "See the atmosphere at The Mason Jar in Greer, SC. Food, drinks, karaoke nights, and the crowd that makes downtown Greer come alive every week.",
   alternates: {
     canonical: `${SITE_CONFIG.url}/gallery`,
   },
   openGraph: {
-    title: "Gallery | The Mason Jar Bar & Grill – Greer, SC",
+    title: "Greer SC Food & Nightlife Photos | The Mason Jar",
     description:
       "Photos of the food, drinks, and nightlife at The Mason Jar — your downtown Greer bar and grill on Trade Street.",
+    images: [
+      {
+        url: "/images/food/burger-and-beer.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Food and drinks at The Mason Jar — downtown Greer SC",
+      },
+    ],
   },
 };
 
@@ -69,8 +77,8 @@ export default function GalleryPage() {
               color: "#F6EFE0",
             }}
           >
-            The Mason Jar<br />
-            <span style={{ color: "#D89B3C" }}>Gallery</span>
+            Food &amp; Nightlife<br />
+            <span style={{ color: "#D89B3C" }}>Photos in Greer, SC</span>
           </h1>
           <p className="text-base md:text-lg" style={{ color: "#8A7A6A" }}>
             Food, drinks, and the kind of energy you have to see to believe. This is what downtown Greer looks like on a Friday night.

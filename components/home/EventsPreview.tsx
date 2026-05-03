@@ -124,7 +124,14 @@ export function EventsPreview() {
             </h3>
             <p className="mt-2 text-sm" style={{ color: "#7A6A5A" }}>
               Downtown Greer's most popular night out. Pick a song. Take the stage.
-              This crowd is on your side.
+              This crowd is on your side.{" "}
+              <TrackedLink
+                href="/karaoke-greer-sc"
+                style={{ color: "#D89B3C" }}
+                gtmEvent={{ event: "cta_click", cta_label: "Karaoke Details", destination: "/karaoke-greer-sc" }}
+              >
+                Karaoke details →
+              </TrackedLink>
             </p>
           </div>
           <TrackedLink

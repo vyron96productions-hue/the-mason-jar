@@ -10,11 +10,21 @@ import { HomeMapStrip } from "@/components/home/HomeMapStrip";
 import { SITE_CONFIG } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "The Mason Jar Bar & Grill | Downtown Greer, SC",
+  title: "Bar & Grill in Downtown Greer SC | The Mason Jar",
   description:
-    "The Mason Jar is Greer's favorite bar and grill on Trade Street. Great burgers, cold drinks, karaoke nights, and live events in downtown Greer, South Carolina.",
+    "The Mason Jar is Greer's favorite bar and grill on Trade Street. Burgers, cold drinks, karaoke nights, and live events in downtown Greer, SC.",
   alternates: {
     canonical: SITE_CONFIG.url,
+  },
+  openGraph: {
+    images: [
+      {
+        url: "/images/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "The Mason Jar Bar & Grill — Downtown Greer, SC",
+      },
+    ],
   },
 };
 
