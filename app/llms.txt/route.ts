@@ -28,6 +28,9 @@ We host karaoke every Friday and Saturday night starting at 9 PM, plus weekly ev
 - About: ${SITE_CONFIG.url}/about
 - Gallery: ${SITE_CONFIG.url}/gallery
 - Contact: ${SITE_CONFIG.url}/contact
+- Karaoke in Greer SC: ${SITE_CONFIG.url}/karaoke-greer-sc
+- Downtown Greer Bar & Grill: ${SITE_CONFIG.url}/downtown-greer-bar-and-grill
+- Downtown Greer Restaurants: ${SITE_CONFIG.url}/downtown-greer-restaurants
 `;
 
   return new Response(body, {

@@ -31,11 +31,13 @@ const eventSchema = {
   name: "Karaoke Night at The Mason Jar",
   description:
     "Friday and Saturday karaoke nights at The Mason Jar in downtown Greer, SC. Starts at 9 PM, runs until close. No cover charge.",
+  startDate: "2026-04-18",
   eventSchedule: {
     "@type": "Schedule",
     repeatFrequency: "P1W",
     byDay: ["https://schema.org/Friday", "https://schema.org/Saturday"],
     startTime: "21:00",
+    scheduleTimezone: "America/New_York",
   },
   location: {
     "@type": "Place",
